@@ -25,7 +25,7 @@ namespace PruebaBD
         Image<Gray, byte> gray = null;
         List<Image<Gray, byte>> trainingImages = new List<Image<Gray, byte>>();
         List<string> labels = new List<string>();
-        List<string> NombePersona = new List<string>();
+        List<string> NombrePersona = new List<string>();
         List<string> ApellidoPersona = new List<string>();
         List<string> Matricula = new List<string>();
         List<string> Contraseña = new List<string>();
@@ -47,7 +47,7 @@ namespace PruebaBD
                 for (int i = 0; i < numLabels; i++)
                 {
                     con = i;
-                    Bitmap bmp = new Bitmap(Cnx.ConvertImgToBinary(con));
+                    Bitmap bmp = new Bitmap(Cnx.ConvertBinary(con));
 
                     trainingImages.Add(new Image<Gray, byte>(bmp));
                     labels.Add(Labels[i]);
@@ -63,6 +63,43 @@ namespace PruebaBD
 
         private void FrameGrabar(object sender, EventArgs e) 
         {
+            
+            try {
+                currentFrame = Grabar.QueryFrame().Resize(436, 339, INTER.CV_INTER_CUBIC);
+                gray = currentFrame.Convert<Gray, Byte>();
+                MCvAvgComp[][] RostrosDetectados = gray.DetectHaarCascade(face, 1.5, 10, HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(272, 205));
+
+                foreach (MCvAvgComp R in RostrosDetectados[0])
+                {
+                    t = t + 1;
+                    result = currentFrame.Copy(R.rect).Convert<Gray, byte>().Resize(100, 100, INTER.CV_INTER_CUBIC);
+                    currentFrame.Draw(R.rect, new Bgr(Color.Blue), 1);
+
+                    if (trainingImages.ToArray().Length != 0)
+                    {
+                        MCvTermCriteria Criterio = new MCvTermCriteria(ConTrain, 0.88);
+                        EigenObjectRecognizer recogida = new EigenObjectRecognizer(trainingImages.ToArray(), label.ToArray(), ref Criterio);
+                        var fa = new Image<Gray, byte>[trainingImages.Count];
+
+                        Nombre = recogida.Recognize(result);
+
+                        currentFrame.Draw(Nombre, ref font, new Point(R.rect.X - 2, R.rect.Y - 2), new Bgr(Color.Green));
+
+                    }
+                    NombrePersona[t - 1] = Nombre;
+                    NombrePersona.Add("");
+
+                    
+                }
+                t = 0;
+                imageBox1.Image= currentFrame;
+                Nombre = "";
+                NombrePersona.Clear();
+            }
+            catch(Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
 
         }
 
