@@ -19,12 +19,12 @@ namespace PruebaBD.Itla.AdministradorDatos
 
         private static OleDbConnection cnnx = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=estudiantes.accbd;");
 
-        private static string[] Nombre;
-        private static string[] Apellido;
-        private static string[] Matricula;
-        private static string[] contraseña;
-        private static byte[] Rostros;
-        private static List<byte[]> ListadoRostros = new List<byte[]>();
+        public static string[] Nombre;
+        public static string[] Apellido;
+        public static string[] Matricula;
+        public static string[] contraseña;
+        public static byte[] Rostros;
+        public static List<byte[]> ListadoRostros = new List<byte[]>();
         public static int totalRostros;
 
         public static bool GuardarImagen(string Nombres, string Apellido, string Matricula, byte[] Captura, string Contraseña)     
