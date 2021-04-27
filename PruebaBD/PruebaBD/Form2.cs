@@ -16,13 +16,13 @@ namespace PruebaBD
     public partial class frmRegistrar : Form
     {
         int con = 0;
-        Image<Bgr, Byte> currentFrame;
+        Image<Bgr, byte> currentFrame;
         Capture Grabar;
         HaarCascade face;
         MCvFont font=new MCvFont(FONT.CV_FONT_HERSHEY_TRIPLEX, 0.4d, 0.4d);
         Image<Gray, byte> result = null;
         Image<Gray, byte> gray = null;
-        List<Image<Gray, byte>> trainingImages = new List<Imagen<Gray, byte>>();
+        List<Image<Gray, byte>> trainingImages = new List<Image<Gray, byte>>();
         List<string> labels = new List<string>();
         List<string> NombePersona = new List<string>();
         List<string> ApellidoPersona = new List<string>();
@@ -34,7 +34,7 @@ namespace PruebaBD
         public frmRegistrar()
         {
             InitializeComponent();
-            face = new HaarCascade("HearCascade_frontalface_default.")
+            face = new HaarCascade("HearCascade_frontalface_default.xml");
             
         }
 
