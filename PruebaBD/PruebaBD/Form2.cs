@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using Emgu.CV;
 using Emgu.CV.Structure;
 using Emgu.CV.CvEnum;
 using PruebaBD.Itla.AdministradorDatos;
+=======
+>>>>>>> parent of 6a0d6ea (Registro)
 
 namespace PruebaBD
 {
-    public partial class frmRegistrar : Form
+    public partial class Form2 : Form
     {
+<<<<<<< HEAD
         int con = 0;
         Image<Bgr, byte> currentFrame;
         Capture Grabar;
@@ -34,6 +38,9 @@ namespace PruebaBD
         DataGridView d = new DataGridView();
 
         public frmRegistrar()
+=======
+        public Form2()
+>>>>>>> parent of 6a0d6ea (Registro)
         {
             InitializeComponent();
             face = new HaarCascade("HearCascade_frontalface_default.xml");
@@ -106,21 +113,6 @@ namespace PruebaBD
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             
-        }
-
-        private void frmRegistrar_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void imageBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
