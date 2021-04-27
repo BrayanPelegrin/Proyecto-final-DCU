@@ -41,6 +41,7 @@
             this.icoMaximizar = new System.Windows.Forms.PictureBox();
             this.icoCerrar = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelTitulo.SuspendLayout();
@@ -53,6 +54,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(116)))));
+            this.panelMenu.Controls.Add(this.btnAyuda);
             this.panelMenu.Controls.Add(this.pictureBox2);
             this.panelMenu.Controls.Add(this.btnSalir);
             this.panelMenu.Controls.Add(this.btnConsultar);
@@ -85,12 +87,15 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(0, 592);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(286, 58);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.TabStop = false;
             this.btnSalir.Text = "Cerrar Sesion";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -103,12 +108,14 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultar.Location = new System.Drawing.Point(0, 176);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(286, 58);
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.TabStop = false;
-            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.Text = "Usuarios";
             this.btnConsultar.UseVisualStyleBackColor = false;
             // 
             // btnBorrar
@@ -120,12 +127,14 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBorrar.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrar.Image")));
+            this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBorrar.Location = new System.Drawing.Point(0, 231);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(286, 58);
             this.btnBorrar.TabIndex = 1;
             this.btnBorrar.TabStop = false;
-            this.btnBorrar.Text = "Borrar Persona";
+            this.btnBorrar.Text = "Examenes";
             this.btnBorrar.UseVisualStyleBackColor = false;
             // 
             // btnInscribir
@@ -137,12 +146,14 @@
             this.btnInscribir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInscribir.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInscribir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnInscribir.Image = ((System.Drawing.Image)(resources.GetObject("btnInscribir.Image")));
+            this.btnInscribir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInscribir.Location = new System.Drawing.Point(0, 122);
             this.btnInscribir.Name = "btnInscribir";
             this.btnInscribir.Size = new System.Drawing.Size(286, 58);
             this.btnInscribir.TabIndex = 0;
             this.btnInscribir.TabStop = false;
-            this.btnInscribir.Text = "Capturar";
+            this.btnInscribir.Text = "Registrar";
             this.btnInscribir.UseVisualStyleBackColor = false;
             this.btnInscribir.Click += new System.EventHandler(this.btnInscribir_Click);
             // 
@@ -225,7 +236,26 @@
             this.panelContenedor.Size = new System.Drawing.Size(1014, 611);
             this.panelContenedor.TabIndex = 2;
             // 
-            // Form1
+            // btnAyuda
+            // 
+            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(116)))));
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAyuda.Location = new System.Drawing.Point(0, 296);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(286, 58);
+            this.btnAyuda.TabIndex = 4;
+            this.btnAyuda.TabStop = false;
+            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -237,7 +267,7 @@
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.panelMenu.ResumeLayout(false);
@@ -265,6 +295,7 @@
         private System.Windows.Forms.PictureBox icoMaximizar;
         private System.Windows.Forms.PictureBox icoCerrar;
         private System.Windows.Forms.PictureBox icoRestaurar;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }
 

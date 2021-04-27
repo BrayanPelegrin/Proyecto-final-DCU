@@ -41,7 +41,7 @@ namespace PruebaBD
 
         private void btnInscribir_Click(object sender, EventArgs e)
         {
-            abrirFormInPanel(new Form2());
+            abrirFormInPanel(new frmRegistrar());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
