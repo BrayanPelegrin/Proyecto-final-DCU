@@ -1,6 +1,6 @@
 ﻿namespace PruebaBD
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnInscribir = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.icoCerrar = new System.Windows.Forms.PictureBox();
-            this.icoMaximizar = new System.Windows.Forms.PictureBox();
-            this.icoMinimizar = new System.Windows.Forms.PictureBox();
             this.icoRestaurar = new System.Windows.Forms.PictureBox();
+            this.icoMinimizar = new System.Windows.Forms.PictureBox();
+            this.icoMaximizar = new System.Windows.Forms.PictureBox();
+            this.icoCerrar = new System.Windows.Forms.PictureBox();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
-            this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoMinimizar)).BeginInit();
+            this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icoRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -64,6 +64,17 @@
             this.panelMenu.Size = new System.Drawing.Size(286, 650);
             this.panelMenu.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(286, 113);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(116)))));
@@ -79,7 +90,7 @@
             this.btnSalir.Size = new System.Drawing.Size(286, 58);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.TabStop = false;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Cerrar Sesion";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -131,7 +142,7 @@
             this.btnInscribir.Size = new System.Drawing.Size(286, 58);
             this.btnInscribir.TabIndex = 0;
             this.btnInscribir.TabStop = false;
-            this.btnInscribir.Text = "Inscribir";
+            this.btnInscribir.Text = "Capturar";
             this.btnInscribir.UseVisualStyleBackColor = false;
             this.btnInscribir.Click += new System.EventHandler(this.btnInscribir_Click);
             // 
@@ -148,53 +159,20 @@
             this.panelTitulo.Size = new System.Drawing.Size(1014, 39);
             this.panelTitulo.TabIndex = 1;
             // 
-            // panelContenedor
+            // icoRestaurar
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.White;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(286, 39);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1014, 611);
-            this.panelContenedor.TabIndex = 2;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(286, 113);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // icoCerrar
-            // 
-            this.icoCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icoCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.icoCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.icoCerrar.Image = ((System.Drawing.Image)(resources.GetObject("icoCerrar.Image")));
-            this.icoCerrar.Location = new System.Drawing.Point(974, 3);
-            this.icoCerrar.Name = "icoCerrar";
-            this.icoCerrar.Size = new System.Drawing.Size(28, 31);
-            this.icoCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoCerrar.TabIndex = 0;
-            this.icoCerrar.TabStop = false;
-            this.icoCerrar.Click += new System.EventHandler(this.icoCerrar_Click);
-            // 
-            // icoMaximizar
-            // 
-            this.icoMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icoMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.icoMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.icoMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("icoMaximizar.Image")));
-            this.icoMaximizar.Location = new System.Drawing.Point(940, 3);
-            this.icoMaximizar.Name = "icoMaximizar";
-            this.icoMaximizar.Size = new System.Drawing.Size(28, 31);
-            this.icoMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoMaximizar.TabIndex = 1;
-            this.icoMaximizar.TabStop = false;
-            this.icoMaximizar.Click += new System.EventHandler(this.icoMaximizar_Click);
+            this.icoRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.icoRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.icoRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icoRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("icoRestaurar.Image")));
+            this.icoRestaurar.Location = new System.Drawing.Point(940, 3);
+            this.icoRestaurar.Name = "icoRestaurar";
+            this.icoRestaurar.Size = new System.Drawing.Size(28, 31);
+            this.icoRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoRestaurar.TabIndex = 2;
+            this.icoRestaurar.TabStop = false;
+            this.icoRestaurar.Visible = false;
+            this.icoRestaurar.Click += new System.EventHandler(this.icoRestaurar_Click);
             // 
             // icoMinimizar
             // 
@@ -210,20 +188,42 @@
             this.icoMinimizar.TabStop = false;
             this.icoMinimizar.Click += new System.EventHandler(this.icoMinimizar_Click);
             // 
-            // icoRestaurar
+            // icoMaximizar
             // 
-            this.icoRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icoRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.icoRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.icoRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("icoRestaurar.Image")));
-            this.icoRestaurar.Location = new System.Drawing.Point(940, 3);
-            this.icoRestaurar.Name = "icoRestaurar";
-            this.icoRestaurar.Size = new System.Drawing.Size(28, 31);
-            this.icoRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icoRestaurar.TabIndex = 2;
-            this.icoRestaurar.TabStop = false;
-            this.icoRestaurar.Visible = false;
-            this.icoRestaurar.Click += new System.EventHandler(this.icoRestaurar_Click);
+            this.icoMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.icoMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.icoMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icoMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("icoMaximizar.Image")));
+            this.icoMaximizar.Location = new System.Drawing.Point(940, 3);
+            this.icoMaximizar.Name = "icoMaximizar";
+            this.icoMaximizar.Size = new System.Drawing.Size(28, 31);
+            this.icoMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoMaximizar.TabIndex = 1;
+            this.icoMaximizar.TabStop = false;
+            this.icoMaximizar.Click += new System.EventHandler(this.icoMaximizar_Click);
+            // 
+            // icoCerrar
+            // 
+            this.icoCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.icoCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.icoCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icoCerrar.Image = ((System.Drawing.Image)(resources.GetObject("icoCerrar.Image")));
+            this.icoCerrar.Location = new System.Drawing.Point(974, 3);
+            this.icoCerrar.Name = "icoCerrar";
+            this.icoCerrar.Size = new System.Drawing.Size(28, 31);
+            this.icoCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icoCerrar.TabIndex = 0;
+            this.icoCerrar.TabStop = false;
+            this.icoCerrar.Click += new System.EventHandler(this.icoCerrar_Click);
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.White;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(286, 39);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1014, 611);
+            this.panelContenedor.TabIndex = 2;
             // 
             // Form1
             // 
@@ -241,12 +241,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.panelMenu.ResumeLayout(false);
-            this.panelTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoMinimizar)).EndInit();
+            this.panelTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icoRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
